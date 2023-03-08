@@ -1,7 +1,12 @@
-class Vehicule : IPilotage
+
+namespace CSharpAnimal.Models.Animals
 {
-    public void Moove()
+
+    class Vehicule : IPilotage
     {
-        Console.WriteLine(" Moove !");
+        public void Moove()
+        {
+            Console.WriteLine(" Moove !");
+        }
     }
 }

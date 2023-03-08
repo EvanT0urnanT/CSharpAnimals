@@ -1,5 +1,5 @@
 using CSharpAnimal.Models.Animals;
-namespace CSharpAnimal.Models.Dragons
+namespace CSharpAnimal.Models.Animals
 {
     class Dragon : Animal,IPilotage
     {
