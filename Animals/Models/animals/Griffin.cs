@@ -1,21 +1,23 @@
-namespace Project.Animal.griffin;
-using Project.Animal.animal;
+using CSharpAnimal.Models.Animals;
 
-
-class Griffin : Animal
+namespace CSharpAnimal.Models.Animals
 {
-    public new string name;
-    public Griffin(string name = "griffin") : base(name)
+    class Griffin : Animal, IPilotage
     {
-        this.name = name;
-    }
-    public override void Moove()
-    {
-        Console.WriteLine(name + " the mooving Griffin");
-    }
-    public new void Sleep()
-    {
-        Console.WriteLine(name + " the sleeping griffin");
-    }
+        public Griffin()
+        {
+            griffinName = "Griffin";
+        }
+        public string griffinName { get; private set; }
 
+        public override void Moove()
+        {
+            Console.WriteLine($"{griffinName} moove");
+        }
+
+        public new void Sleep()
+        {
+            Console.WriteLine($"{griffinName} sleep");
+        }
+    }
 }
