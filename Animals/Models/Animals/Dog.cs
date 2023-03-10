@@ -9,9 +9,10 @@ namespace CSharpAnimal.Models.Animals
 {
     internal class Dog : Animal
     {
-        public string dogName { get; private set; }
-        public Dog(string name) {
-            this.dogName = name;
+        public Dog(string name, string type, int ID) {
+            this.name = name;
+            this.Type = type;
+            this.Id = ID;
         }
     }
 }

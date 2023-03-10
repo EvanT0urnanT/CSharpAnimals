@@ -6,18 +6,23 @@ namespace CSharpAnimal.Models.Animals
     {
         public Griffin()
         {
-            griffinName = "Griffin";
+            name = "Griffin";
         }
-        public string griffinName { get; private set; }
+        public Griffin(string name, string type, int ID)
+        {
+            this.name = name;
+            this.Type = type;
+            this.Id = ID;
+        }
 
         public override void Moove()
         {
-            Console.WriteLine($"{griffinName} moove");
+            Console.WriteLine($"{name} moove");
         }
 
         public new void Sleep()
         {
-            Console.WriteLine($"{griffinName} sleep");
+            Console.WriteLine($"{name} sleep");
         }
     }
 }

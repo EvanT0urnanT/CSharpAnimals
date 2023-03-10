@@ -5,18 +5,23 @@ namespace CSharpAnimal.Models.Animals
     {
         public Dragon()
         {
-            dragonName = "Dragon";
+            name = "Dragon";
         }
-        public string dragonName { get; private set; }
 
+        public Dragon(string name, string type, int ID)
+        {
+            this.name = name;
+            this.Type = type;
+            this.Id = ID;
+        }
         public override void Moove()
         {
-            Console.WriteLine($"{dragonName} moove");
+            Console.WriteLine($"{name} moove");
         }
 
         public new void Sleep()
         {
-            Console.WriteLine($"{dragonName} sleep");
+            Console.WriteLine($"{name} sleep");
         }
     }
 }
