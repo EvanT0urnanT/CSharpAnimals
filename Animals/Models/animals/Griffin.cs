@@ -2,7 +2,7 @@ using CSharpAnimal.Models.Animals;
 
 namespace CSharpAnimal.Models.Animals
 {
-    class Griffin : Animal, IPilotage
+    class Griffin : Animal, IPilotage,IFly
     {
         public Griffin()
         {
@@ -24,6 +24,10 @@ namespace CSharpAnimal.Models.Animals
         public new void Sleep()
         {
             Console.WriteLine($"{name} sleep");
+        }
+        public void Fly()
+        {
+            Console.WriteLine("I Believe i can fly !");
         }
     }
 }

@@ -5,13 +5,19 @@ class Program
 {    
     static void Main(string[] args)
     {
-        Animal animal = new Dragon();
+        Dragon animal = new Dragon();
         animal.Sleep();
         animal.Moove();
 
-        Animal animal2 = new Griffin();
+        Griffin animal2 = new Griffin();
         animal2.Sleep();
         animal2.Moove();
+
+        Bird animal3 = new Bird();
+        animal3.Fly();
+
+        Eagle animal4 = new Eagle();
+        animal4.Fly();
 
 
 

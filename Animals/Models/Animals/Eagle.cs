@@ -1,14 +1,14 @@
-using CSharpAnimal.Models.Animals;
+﻿using CSharpAnimal.Models.Animals;
 namespace CSharpAnimal.Models.Animals
 {
-    class Dragon : Animal,IPilotage,IFly
+    class Eagle : Animal, IPilotage, IFly
     {
-        public Dragon()
+        public Eagle()
         {
-            name = "Dragon";
+            name = "Eagle";
         }
 
-        public Dragon(string name, string type, int ID, int age)
+        public Eagle(string name, string type, int ID, int age)
         {
             this.name = name;
             this.Type = type;
