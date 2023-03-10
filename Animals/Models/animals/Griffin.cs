@@ -8,11 +8,12 @@ namespace CSharpAnimal.Models.Animals
         {
             name = "Griffin";
         }
-        public Griffin(string name, string type, int ID)
+        public Griffin(string name, string type, int ID, int age)
         {
             this.name = name;
             this.Type = type;
             this.Id = ID;
+            this.age = age;
         }
 
         public override void Moove()

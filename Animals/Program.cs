@@ -15,12 +15,12 @@ class Program
 
 
 
-        Dog dog = new Dog("Loup", "Epic", 10);
-        Dragon enderDragon = new Dragon("Ender Dragon", "Legendary", 99);
-        Griffin griffin = new Griffin("GriffonDort", "Rare", 5);
-        Dragon ptera = new Dragon("Ptera", "Commun", 1);
-        Dog wolf = new Dog("Wolf", "Commun", 2);
-        Dog ben = new Dog("Ben", "Commun", 20);
+        Dog dog = new Dog("Loup", "Epic", 10,17);
+        Dragon enderDragon = new Dragon("Ender Dragon", "Legendary", 99, 17);
+        Griffin griffin = new Griffin("GriffonDort", "Rare", 5, 17);
+        Dragon ptera = new Dragon("Ptera", "Commun", 1, 14);
+        Dog wolf = new Dog("Wolf", "Commun", 2,13);
+        Dog ben = new Dog("Ben", "Commun", 20, 17);
 
         Animal[] liste = { dog, enderDragon, griffin, ptera, wolf, ben };
         //var result = liste.Where(c => !c.Type.Contains("Rare"));
@@ -37,11 +37,15 @@ class Program
 
         var sortedliste = listeAnimaux.OrderByDescending(c => c.Id).ToList();
 
+        IEnumerable<Animal> listeAnimauxAge =
+            from animauxAge in sortedliste
+            where animauxAge.age >= 12 && animauxAge.age <= 15
+            select animauxAge;
 
 
-        foreach (Animal animaux in sortedliste)
+        foreach (Animal animaux in listeAnimauxAge)
         {
-            Console.WriteLine(animaux.name);
+            Console.WriteLine(animaux.name + " " + animaux.age);
         }
 
 
